@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Perawatan">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="@color/greyputih"
+        app:title="Perawatan"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/idTBPerawatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/logo_daikin"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="end"
+            android:layout_width="100dp"
+            android:layout_height="20dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/idCVMenu1"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        app:cardCornerRadius="10dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/idIVCuciAC"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="2dp"
+                android:src="@drawable/gambar_perbaikan_ac" />
+
+            <TextView
+                android:id="@+id/idTVJudul1"
+                android:layout_toEndOf="@id/idIVCuciAC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="Cuci AC"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_toEndOf="@id/idIVCuciAC"
+                android:layout_below="@id/idTVJudul1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="Pembersihan AC Secara rutin untuk menjaga performa AC tetap prima"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/idCVMenu2"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        app:cardCornerRadius="10dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/idIVPengecekanAC"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="2dp"
+                android:src="@drawable/gambar_pengecekan_ac" />
+
+            <TextView
+                android:id="@+id/idTVJudul2"
+                android:layout_toEndOf="@id/idIVPengecekanAC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="Pengecekan AC"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_toEndOf="@id/idIVPengecekanAC"
+                android:layout_below="@id/idTVJudul2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="Pengecekan AC jika dirasa ada yang bermasalah."
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</LinearLayout>

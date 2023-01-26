@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_Dashboard">
+
+    <RelativeLayout
+        android:background="@color/greyputih"
+        android:id="@+id/idRLHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp"
+        android:elevation="@dimen/cardview_compat_inset_shadow">
+
+        <ImageView
+            android:id="@+id/idIVDaikin"
+            android:layout_width="143dp"
+            android:layout_height="40dp"
+            android:src="@drawable/daikin" />
+
+        <ImageView
+            android:id="@+id/idIVnotifikasi"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="77dp"
+            android:src="@drawable/notifikasi" />
+
+        <ImageView
+            android:id="@+id/idIVmenu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/menu"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_marginBottom="90dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/idCVNotif"
+                app:cardCornerRadius="16dp"
+                android:layout_marginVertical="14dp"
+                android:layout_marginHorizontal="24dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="153dp">
+
+
+                <RelativeLayout
+                    android:paddingEnd="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/idIVLine"
+                        android:layout_width="15dp"
+                        android:layout_height="120dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="14dp"
+                        android:src="@drawable/rule" />
+
+                    <TextView
+                        android:id="@+id/idTVHello"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/colorAccent"
+                        android:layout_alignTop="@id/idIVLine"
+                        android:layout_alignStart="@id/idIVLine"
+                        android:layout_marginStart="40dp"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/idTVNotif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="seminggu lagi, Anda harus melakukan perawatan AC."
+                        android:textColor="@color/colorAccent"
+                        android:layout_alignBottom="@id/idIVLine"
+                        android:layout_alignStart="@id/idIVLine"
+                        android:layout_marginStart="40dp"
+                        android:textSize="18dp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:id="@+id/menuSection"
+                android:layout_below="@+id/idCVNotif"
+                android:layout_marginVertical="14dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/idIVIMenu"
+                    android:src="@drawable/menu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+
+                <TextView
+                    android:layout_toEndOf="@id/idIVIMenu"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="18dp"
+                    android:text="Menu"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/idRLIconMenu"
+                android:layout_below="@+id/menuSection"
+                android:gravity="center"
+                android:paddingVertical="14dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                 <ImageButton
+                    android:id="@+id/menu1"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/perawatan1"/>
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/menu1"
+
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:text="Perawatan"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="11dp" />
+
+                <ImageButton
+                    android:id="@+id/menu2"
+                    android:backgroundTint="@color/white"
+                    android:layout_toEndOf="@id/menu1"
+                    android:src="@drawable/pembelian1"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"/>
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/menu2"
+                    android:layout_toEndOf="@id/menu1"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Pembelian"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="11dp" />
+
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/menu3"
+                    android:layout_toEndOf="@id/menu2"
+                    android:src="@drawable/perbaikan1"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"/>
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/menu3"
+                    android:layout_toEndOf="@id/menu2"
+                    android:layout_marginTop="6dp"
+                    android:text="Perbaikan"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="11dp" />
+
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/menu4"
+                    android:layout_below="@id/menu1"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/garansi1"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"/>
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/menu4"
+                    android:layout_marginTop="6dp"
+                    android:text="Cek Garansi"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="11dp" />
+
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/menu5"
+                    android:layout_below="@id/menu2"
+                    android:layout_toEndOf="@id/menu4"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/historical1"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"/>
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/menu5"
+                    android:layout_toEndOf="@id/menu4"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginHorizontal="50dp"
+                    android:text="Historycal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="11dp" />
+
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/menu6"
+                    android:layout_below="@id/menu3"
+                    android:layout_toEndOf="@id/menu5"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/hitung1"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"/>
+
+                <TextView
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/menu6"
+                    android:layout_toEndOf="@id/menu5"
+                    android:layout_marginTop="6dp"
+                    android:text="Hitung Kapasitas"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="11dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/sectionBeritaPromosi"
+                android:layout_marginVertical="14dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_below="@+id/idRLIconMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/idTVPromosi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Berita dan Promosi"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="18dp" />
+                <ImageView
+                    android:layout_below="@id/idTVPromosi"
+                    android:src="@drawable/promosi"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/MenuNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_marginTop="-90dp"
+        android:elevation="@dimen/cardview_compat_inset_shadow">
+
+        <ImageButton
+            android:id="@+id/nav1"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_baseline_home_24"
+            android:layout_marginStart="-35dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/descnav1"
+            android:layout_below="@+id/nav1"
+            android:layout_marginStart="-35dp"
+            android:textColor="@color/colorSecondary"
+            android:textSize="14dp"
+            android:text="Home"
+            android:textAlignment="center"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:id="@+id/nav2"
+            android:layout_marginStart="50dp"
+            android:layout_toEndOf="@id/nav1"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_baseline_schedule_24"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/descnav2"
+            android:layout_toEndOf="@id/descnav1"
+            android:layout_below="@+id/nav1"
+            android:textColor="@color/colorSecondary"
+            android:layout_marginStart="38dp"
+            android:textSize="14dp"
+            android:text="Buat Janji"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:id="@+id/nav3"
+            android:layout_toEndOf="@id/nav2"
+            android:layout_marginStart="50dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_baseline_shopping_cart_24"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/descnav3"
+            android:layout_toEndOf="@id/descnav2"
+            android:layout_below="@+id/nav1"
+            android:textColor="@color/colorSecondary"
+            android:layout_marginStart="34dp"
+            android:textSize="14dp"
+            android:text="Pesanan"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:id="@+id/nav4"
+            android:layout_toEndOf="@id/nav3"
+            android:layout_marginStart="50dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/descnav4"
+            android:layout_toEndOf="@id/descnav3"
+            android:layout_below="@+id/nav1"
+            android:textColor="@color/colorSecondary"
+            android:textSize="14dp"
+            android:layout_marginStart="40dp"
+            android:text="Profile"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+    </RelativeLayout>
+
+
+</LinearLayout>

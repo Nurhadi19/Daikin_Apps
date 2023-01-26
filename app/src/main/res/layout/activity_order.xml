@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Order">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/idTBOrderAc"
+        android:layout_marginBottom="20dp"
+        app:title="Order Pesanan AC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:paddingLeft="20dp"
+            android:src="@drawable/logo_daikin"
+            android:layout_gravity="end"
+            android:layout_marginRight="20dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <!--<TextView
+        android:text="Silahkan Isi Form Berikut Untuk Melakukan Pengorderan"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/bluesky"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"/>-->
+
+
+    <ScrollView
+        android:layout_marginBottom="200dp"
+        android:padding="15dp"
+        android:layout_below="@id/idTBOrderAc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/idUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="ID User"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/idETIdUserOrder"
+                    android:layout_below="@id/idUser"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:inputType="text"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/namaPemesan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/idETIdUserOrder"
+                    android:text="Nama Pemesan"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/idETNamaPemesan"
+                    android:layout_below="@id/namaPemesan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/black"
+                    android:inputType="text"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/alamatPemesan"
+                    android:layout_below="@id/idETNamaPemesan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat Pemesan"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/idETAlamatPemesan"
+                    android:layout_below="@+id/alamatPemesan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/black"
+                    android:inputType="text"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/namaAc"
+                    android:layout_below="@id/idETAlamatPemesan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama AC"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/idETNamaAcPesanan"
+                    android:layout_below="@id/namaAc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/black"
+                    android:inputType="text"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/idIVAcPesanan"
+                    android:layout_below="@id/idETNamaAcPesanan"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/ac" />
+
+                <TextView
+                    android:id="@+id/jumlahUnit"
+                    android:layout_below="@id/idIVAcPesanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah Unit"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/idETJumlahUnitAcPesanan"
+                    android:layout_below="@id/jumlahUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/black"
+                    android:inputType="number"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/totalHarga"
+                    android:layout_below="@id/idETJumlahUnitAcPesanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="Total Harga"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/idETTotalHarga"
+                    android:layout_below="@id/totalHarga"
+                    android:visibility="gone"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/idCVOrder"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:text="Total Harga"
+                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:text="Rp. "
+                        android:textSize="18dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/idTVTotalHarga"
+                        android:textColor="@color/black"
+                        android:text=""
+                        android:textSize="18dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/idMBOrder"
+                android:backgroundTint="@color/colorSecondary"
+                android:layout_below="@+id/idMBTotalHarga"
+                android:layout_marginTop="15dp"
+                android:text="Pesan"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/idMBTotalHarga"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/bluesky"
+                android:text="Total"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

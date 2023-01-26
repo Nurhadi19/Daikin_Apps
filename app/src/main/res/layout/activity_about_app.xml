@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AboutApp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="@color/greyputih"
+        app:title="Tentang Aplikasi"
+        android:id="@+id/TBAbout"
+        android:layout_alignParentTop="true"
+        android:titleTextColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:paddingLeft="20dp"
+            android:src="@drawable/logo_daikin"
+            android:layout_gravity="end"
+            android:layout_marginRight="20dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <ImageView
+            android:src="@drawable/logo_daikin"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="Tentang Aplikasi"
+            android:textColor="@color/bluesky"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textSize="18sp"
+            android:justificationMode="inter_word"
+            android:lineHeight="25dp"
+            android:text="Aplikasi Penjualan, Perbaikan dan Pengecekan AC ini, bertujuan agar memudahkan para customer untuk melakukan order untuk keperluan AC mereka."
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/idTVDeveloper"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="Tentang Developer"
+            android:textColor="@color/bluesky"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/Dev3"
+                android:src="@drawable/nurhadi"
+                android:layout_width="140dp"
+                android:layout_height="140dp"/>
+
+            <TextView
+                android:layout_below="@id/Dev3"
+                android:textColor="@color/black"
+                android:text="Nurhadi Sasono"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_width="140dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/Dev4"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/tegar"
+                android:layout_width="140dp"
+                android:layout_height="140dp"/>
+
+            <TextView
+               android:layout_below="@id/Dev4"
+                android:textColor="@color/black"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="center"
+                android:text="Muhammad Tegar Wijaksana"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

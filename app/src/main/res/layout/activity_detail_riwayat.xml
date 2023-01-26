@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailRiwayat">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/idToolbar"
+        android:layout_marginBottom="20dp"
+        app:title="Detail Riwayat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:paddingLeft="20dp"
+            android:src="@drawable/logo_daikin"
+            android:layout_gravity="end"
+            android:layout_marginRight="20dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:padding="15dp"
+        android:layout_marginBottom="60dp"
+        android:layout_below="@id/idToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/idUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="ID User"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/idETIdUserOrder"
+                android:layout_below="@id/idUser"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:inputType="text"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/idETIdPembelian"
+                android:layout_below="@id/idETIdUserOrder"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:inputType="text"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/namaPemesan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idETIdUserOrder"
+                android:text="Nama Pemesan"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/idETNamaPemesan"
+                android:layout_below="@id/namaPemesan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/black"
+                android:inputType="text"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/alamatPemesan"
+                android:layout_below="@id/idETNamaPemesan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat Pemesan"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/idETAlamatPemesan"
+                android:layout_below="@+id/alamatPemesan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/black"
+                android:inputType="text"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tanggal"
+                android:layout_below="@id/idETAlamatPemesan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Pembelian"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/idETtanggal"
+                android:layout_below="@id/tanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/black"
+                android:inputType="text"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/namaAc"
+                android:layout_below="@id/idETtanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama AC"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/idETNamaAcPesanan"
+                android:layout_below="@id/namaAc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/black"
+                android:inputType="text"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/jumlahUnit"
+                android:layout_below="@id/idETNamaAcPesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Unit"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/idETJumlahUnitAcPesanan"
+                android:layout_below="@id/jumlahUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/black"
+                android:inputType="number"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/totalHarga"
+                android:layout_below="@id/idETJumlahUnitAcPesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Pembayaran"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/idETTotalHarga"
+                android:layout_below="@id/totalHarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/black"
+                android:inputType="number"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/buktiTransfer"
+                android:layout_below="@id/idETTotalHarga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bukti Transfer"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <ImageButton
+                android:id="@+id/idIBBuktiPembayaran"
+                android:layout_below="@id/buktiTransfer"
+                android:src="@drawable/ic_baseline_camera_alt_24"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="15dp"
+        android:textAllCaps="false"
+        android:id="@+id/idBTNUpdate"
+        android:text="Upload"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
